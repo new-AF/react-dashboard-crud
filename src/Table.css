@@ -19,6 +19,17 @@ table {
         padding-block: var(--gap-medium);
     }
 
+    tr {
+        th:first-of-type,
+        td:first-of-type {
+            padding-inline-start: var(--gap-large);
+        }
+        th:last-of-type,
+        td:last-of-type {
+            padding-inline-end: var(--gap-large);
+        }
+    }
+
     th,
     td {
         text-align: start;
