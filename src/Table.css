@@ -7,13 +7,18 @@
 
 table {
     --border-width: medium;
+    --border-color: rgba(245, 245, 245, 0.233);
     border-spacing: 0;
     overflow: hidden;
 
     td {
-        border: var(--border-width) solid whitesmoke;
+        border: var(--border-width) solid var(--border-color);
         border-block-width: var(--border-width) 0;
-        border-inline-width: var(--border-width) 0;
+        border-inline-width: 0 0;
+
+        &:first-of-type {
+            border-inline-start-width: var(--border-width);
+        }
 
         &:last-of-type {
             border-inline-end-width: var(--border-width);
