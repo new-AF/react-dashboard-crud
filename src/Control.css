@@ -1,10 +1,12 @@
 .control {
     .edit {
         padding-inline: var(--gap-mega);
+        font-weight: 700;
+        letter-spacing: 0.5pt;
     }
     .delete {
-        border-start-start-radius: 0;
-        border-end-start-radius: 0;
+        color: var(--de-emph-color);
+        font-size: 0.9em;
     }
     display: flex;
     column-gap: var(--gap-large);
