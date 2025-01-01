@@ -11,7 +11,7 @@ function App() {
     return (
         <>
             <header>
-                <h1>My CRUD App</h1>
+                <h6>My CRUD App</h6>
             </header>
             <main>
                 <Table demo={true} />

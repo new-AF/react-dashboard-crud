@@ -1,5 +1,7 @@
 import { Row } from "./Row";
 
+import "./Table.css";
+
 const exampleObject = () => {
     const value = Math.random() + "";
     return {
@@ -11,5 +13,9 @@ const exampleObject = () => {
 export const Table = ({ example }) => {
     const array = Array(5).fill(1).map(exampleObject);
     const elements = array.map((obj) => <Row obj={obj} />);
-    return <table>{elements}</table>;
+    return (
+        <table>
+            <tbody>{elements}</tbody>
+        </table>
+    );
 };
