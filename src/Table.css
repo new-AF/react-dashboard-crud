@@ -15,6 +15,10 @@ table {
         background-color: color-mix(in srgb, #242424, black 30%) !important;
     }
 
+    thead th {
+        padding-block: var(--gap-medium);
+    }
+
     th,
     td {
         text-align: start;
