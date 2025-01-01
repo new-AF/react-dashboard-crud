@@ -8,52 +8,64 @@
 table {
     --border-width: medium;
     --border-color: rgba(245, 245, 245, 0.233);
+    --border-radius: var(--gap-small);
     border-spacing: 0;
     overflow: hidden;
+    box-shadow: 0 0.1rem 1rem gray;
+
+    th,
+    td {
+        text-align: start;
+        padding-inline: var(--gap-large);
+        padding-block: var(--gap-medium);
+    }
+
+    thead {
+        th {
+            background-color: rgba(255, 250, 250, 0.203);
+            color: snow;
+            text-transform: capitalize;
+        }
+
+        overflow: hidden;
+    }
 
     td {
         border: var(--border-width) solid var(--border-color);
-        border-block-width: var(--border-width) 0;
+        border-block-width: 0 var(--border-width);
         border-inline-width: 0 0;
+    }
 
+    /* each left and right cells */
+    tr > td {
         &:first-of-type {
             border-inline-start-width: var(--border-width);
         }
 
         &:last-of-type {
             border-inline-end-width: var(--border-width);
-            /* background-color: green; */
-        }
-
-        padding-inline: var(--gap-medium);
-        padding-block: var(--gap-tiny);
-    }
-
-    tr:first-of-type {
-        td:first-of-type {
-            /* background-color: green; */
-            border-start-start-radius: var(--gap-small);
-        }
-
-        td:last-of-type {
-            /* background-color: green; */
-            border-start-end-radius: var(--gap-small);
         }
     }
 
-    tr:last-of-type {
-        td {
-            border-block-end-width: var(--border-width);
+    /* first row */
+    thead {
+        th:first-of-type {
+            border-start-start-radius: var(--border-radius);
         }
 
+        th:last-of-type {
+            border-start-end-radius: var(--border-radius);
+        }
+    }
+
+    /* last row */
+    tbody > tr:last-of-type {
         td:first-of-type {
-            /* background-color: green; */
-            border-end-start-radius: var(--gap-small);
+            border-end-start-radius: var(--border-radius);
         }
 
         td:last-of-type {
-            /* background-color: green; */
-            border-end-end-radius: var(--gap-small);
+            border-end-end-radius: var(--border-radius);
         }
     }
 }

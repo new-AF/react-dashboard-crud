@@ -12,10 +12,16 @@ const exampleObject = () => {
 
 export const Table = ({ example }) => {
     const array = Array(5).fill(1).map(exampleObject);
-    const elements = array.map((obj) => <Row obj={obj} />);
+
+    const headerCells = Object.keys(array[0]).map((value) => <th>{value}</th>);
+
+    const dataCells = array.map((obj) => <Row obj={obj} />);
     return (
         <table>
-            <tbody>{elements}</tbody>
+            <thead>
+                <tr>{headerCells}</tr>
+            </thead>
+            <tbody>{dataCells}</tbody>
         </table>
     );
 };
