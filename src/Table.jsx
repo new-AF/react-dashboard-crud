@@ -13,7 +13,8 @@ const exampleObject = () => {
 export const Table = ({ example }) => {
     const array = Array(5).fill(1).map(exampleObject);
 
-    const headerCells = Object.keys(array[0]).map((value) => <th>{value}</th>);
+    const headerValues = Object.keys(array[0]).concat(["Actions"]);
+    const headerCells = headerValues.map((value) => <th>{value}</th>);
 
     const dataCells = array.map((obj) => <Row obj={obj} />);
     return (
