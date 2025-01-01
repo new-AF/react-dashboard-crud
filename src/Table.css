@@ -6,16 +6,17 @@
 }
 
 table {
+    --border-width: medium;
     border-spacing: 0;
     overflow: hidden;
 
     td {
-        border: medium solid whitesmoke;
-        border-block-width: medium 0;
-        border-inline-width: medium 0;
+        border: var(--border-width) solid whitesmoke;
+        border-block-width: var(--border-width) 0;
+        border-inline-width: var(--border-width) 0;
 
         &:last-of-type {
-            border-inline-end-width: medium;
+            border-inline-end-width: var(--border-width);
             /* background-color: green; */
         }
 
@@ -37,7 +38,7 @@ table {
 
     tr:last-of-type {
         td {
-            border-block-end-width: medium;
+            border-block-end-width: var(--border-width);
         }
 
         td:first-of-type {
