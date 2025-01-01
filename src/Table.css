@@ -5,13 +5,17 @@
     --gap-tiny: 0.25rem;
 }
 
+table thead td th {
+    overflow: hidden;
+}
+
 table {
     --border-width: medium;
     --border-color: rgba(245, 245, 245, 0.233);
     --border-radius: var(--gap-small);
     border-spacing: 0;
     overflow: hidden;
-    box-shadow: 0 0.1rem 1rem gray;
+    box-shadow: 0 0.2rem 1rem rgba(128, 128, 128, 0.466);
 
     th,
     td {
