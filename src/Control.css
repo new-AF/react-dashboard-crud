@@ -6,7 +6,9 @@
     }
     .delete {
         color: var(--de-emph-color);
-        font-size: 0.9em;
+        font-size: 0.7em;
+
+        letter-spacing: 0.2pt;
     }
     display: flex;
     column-gap: var(--gap-large);
