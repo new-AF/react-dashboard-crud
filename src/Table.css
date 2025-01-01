@@ -10,6 +10,11 @@ table {
     overflow: hidden;
     box-shadow: 0 0.2rem 1rem rgba(128, 128, 128, 0.466);
 
+    &:hover tbody tr {
+        color: rgba(255, 250, 250, 0.4) !important;
+        background-color: color-mix(in srgb, #242424, black 20%) !important;
+    }
+
     th,
     td {
         text-align: start;

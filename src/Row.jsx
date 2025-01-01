@@ -2,12 +2,14 @@
 
 import { appendControl } from "./Control";
 
-export const Row = ({ obj }) => {
+import "./Row.css";
+
+export const Row = ({ className = "row", obj }) => {
     const elements = Object.entries(obj).map(([key, value]) => (
         <td>{value}</td>
     ));
 
     appendControl(elements);
 
-    return <tr>{elements}</tr>;
+    return <tr className={className}>{elements}</tr>;
 };

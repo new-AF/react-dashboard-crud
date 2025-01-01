@@ -1,0 +1,8 @@
+.row {
+    &:hover {
+        color: unset !important;
+        background-color: unset !important;
+    }
+    transition: color var(--transition-time),
+        background-color var(--transition-time);
+}
