@@ -1,4 +1,20 @@
 .control {
+    button {
+        svg {
+            --width: 1em;
+            width: var(--width);
+            height: var(--width);
+        }
+
+        &:has(svg) {
+            display: grid;
+            row-gap: var(--gap-tiny);
+            justify-items: center;
+            align-items: center;
+        }
+        align-self: center;
+    }
+
     .edit {
         padding-inline: var(--gap-mega);
         font-weight: 700;
