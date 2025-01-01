@@ -1,13 +1,13 @@
 /*  */
 
-import { appendControlCell } from "./ControlCell";
+import { appendControl } from "./Control";
 
 export const Row = ({ obj }) => {
     const elements = Object.entries(obj).map(([key, value]) => (
         <td>{value}</td>
     ));
 
-    appendControlCell(elements);
+    appendControl(elements);
 
     return <tr>{elements}</tr>;
 };

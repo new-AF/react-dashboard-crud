@@ -1,7 +1,9 @@
 import { EditButton } from "./EditButton";
 import { DeleteButton } from "./DeleteButton";
 
-export const ControlCell = ({ className = "control" }) => {
+import "./Control.css";
+
+export const Control = ({ className = "control" }) => {
     return (
         <td className={className}>
             <EditButton />
@@ -10,6 +12,6 @@ export const ControlCell = ({ className = "control" }) => {
     );
 };
 
-export const appendControlCell = (array) => {
-    array.push(<ControlCell />);
+export const appendControl = (array) => {
+    array.push(<Control />);
 };

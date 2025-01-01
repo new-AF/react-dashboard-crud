@@ -1,0 +1,11 @@
+.control {
+    .edit {
+        padding-inline: var(--gap-mega);
+    }
+    .delete {
+        border-start-start-radius: 0;
+        border-end-start-radius: 0;
+    }
+    display: flex;
+    column-gap: var(--gap-large);
+}
