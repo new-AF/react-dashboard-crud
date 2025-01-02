@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 
 import { Table } from "./Table";
 import { Header } from "./Header";
+import { Modal } from "./Modal";
 import { NewUserForm } from "./NewUserForm";
 
 import "./App.css";
@@ -16,7 +17,7 @@ function App() {
             <Header />
             <main>
                 <Table demo={true} />
-                <NewUserForm />
+                <Modal children={<NewUserForm />} />
             </main>
         </>
     );

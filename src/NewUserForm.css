@@ -7,7 +7,6 @@ input {
     font-weight: 500;
     font-family: inherit;
     background-color: #1a1a1a;
-    cursor: pointer;
     transition: border-color 0.25s;
 
     &:hover {
@@ -25,6 +24,7 @@ input:not(input[type="submit"]) {
 
 input[type="submit"] {
     font-size: 1.25rem;
+    cursor: pointer;
 }
 
 .new-user-form {
@@ -43,9 +43,7 @@ input[type="submit"] {
     padding-inline: 0.6em;
     padding-block: 1.2em;
 
-    position: absolute;
-
-    background-color: var(--header-bg);
+    background-color: var(--modal-bg);
 
     display: grid;
 }
