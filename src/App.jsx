@@ -17,7 +17,7 @@ function App() {
     useEffect(() => {
         const readDB = async () => {
             try {
-                const response = await fetch("./public/db.json");
+                const response = await fetch("/db.json");
                 if (response.ok === false) throw new Error(response);
                 const json = await response.json();
                 console.log(json);
@@ -27,7 +27,7 @@ function App() {
             }
         };
 
-        setTimeout(readDB, 500);
+        setTimeout(readDB, 1);
     }, []);
 
     const getIds = () => {
