@@ -7,10 +7,12 @@ table {
     --border-color: rgba(245, 245, 245, 0.233);
     --border-radius: var(--gap-small);
 
+    border-radius: var(--border-radius);
+
     min-width: 1024px;
     border-spacing: 0;
     overflow: hidden;
-    box-shadow: 0 0.2rem 1rem rgba(128, 128, 128, 0.466);
+    box-shadow: 0 0.2rem 1rem color-mix(in srgb, var(--bg), black 50%);
 
     th.Actions {
         padding-inline-start: calc(var(--gap-small) + 2 * var(--gap-mega));
