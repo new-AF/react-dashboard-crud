@@ -1,7 +1,6 @@
 import { SVG } from "./SVG";
 
 import "./Modal.css";
-import { use } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 

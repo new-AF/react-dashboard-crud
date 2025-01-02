@@ -1,0 +1,19 @@
+footer {
+    svg {
+        --width: 1em;
+        width: var(--width);
+        height: var(--width);
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+        column-gap: var(--gap-tiny);
+    }
+
+    display: flex;
+    column-gap: var(--gap-small);
+    justify-content: center;
+    align-items: end;
+    padding-block: var(--gap-medium);
+}

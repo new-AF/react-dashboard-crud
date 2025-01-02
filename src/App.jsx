@@ -6,6 +6,7 @@ import { Table } from "./Table";
 import { Header } from "./Header";
 import { Modal } from "./Modal";
 import { NewUserForm } from "./NewUserForm";
+import { Footer } from "./Footer";
 
 import "./App.css";
 import { useEffect } from "react";
@@ -101,6 +102,7 @@ function App() {
                 )}
                 <Modal children={<NewUserForm addUser={addUser} />} />
             </main>
+            <Footer />
         </>
     );
 }

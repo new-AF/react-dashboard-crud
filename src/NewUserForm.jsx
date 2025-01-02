@@ -38,7 +38,7 @@ export const NewUserForm = ({ className = "new-user-form", addUser }) => {
                 />
             </fieldset>
 
-            <fieldset>
+            {/* <fieldset>
                 <label htmlFor="tel">Enter user's contact number:</label>
                 <input
                     id="tel"
@@ -46,9 +46,16 @@ export const NewUserForm = ({ className = "new-user-form", addUser }) => {
                     value={state.tel}
                     onInput={(e) => setKey("tel", e.target.value)}
                 />
-            </fieldset>
+            </fieldset> */}
 
-            <input type="submit" value="Add user" onClick={onClick} />
+            <input
+                type="submit"
+                value="Add user"
+                onClick={(e) => {
+                    e.preventDefault();
+                    onClick(e);
+                }}
+            />
         </form>
     );
 };

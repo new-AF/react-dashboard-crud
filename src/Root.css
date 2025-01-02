@@ -14,6 +14,8 @@
     --header-bg: color-mix(in srgb, var(--bg), white 10%);
     --modal-bg: color-mix(in srgb, var(--bg), white 25%);
     --table-header-bg: color-mix(in srgb, var(--bg), white 25%);
+    --link-color: rgba(255, 250, 250, 0.721);
+    --link-color-hover: color-mix(in srgb, var(--link-color), black 10%);
     --de-emph-color: rgba(255, 250, 250, 0.8);
 
     --max-width: 1280px;
@@ -54,7 +56,7 @@ body {
     width: 100%;
 
     display: grid;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 10rem 1fr;
 
     margin: 0 auto;
     text-align: center;
@@ -67,12 +69,13 @@ main {
 }
 
 a {
+    cursor: pointer;
     font-weight: 500;
-    color: #646cff;
+    color: var(--link-color);
     text-decoration: inherit;
 }
 a:hover {
-    color: #535bf2;
+    color: var(--link-color-hover);
 }
 
 ul {
