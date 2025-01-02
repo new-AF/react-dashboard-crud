@@ -1,0 +1,51 @@
+input {
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+
+    &:hover {
+        border-color: #646cff;
+    }
+    &:focus,
+    &:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+    }
+}
+
+input:not(input[type="submit"]) {
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    font-size: 1.25rem;
+}
+
+.new-user-form {
+    fieldset {
+        border: none;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+
+        label {
+            text-align: end;
+            padding-inline-end: var(--gap-medium);
+        }
+    }
+
+    padding-inline: 0.6em;
+    padding-block: 1.2em;
+
+    position: absolute;
+
+    background-color: var(--header-bg);
+
+    display: grid;
+}

@@ -3,8 +3,10 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 
 import { Table } from "./Table";
-import "./App.css";
 import { Header } from "./Header";
+import { NewUserForm } from "./NewUserForm";
+
+import "./App.css";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -14,6 +16,7 @@ function App() {
             <Header />
             <main>
                 <Table demo={true} />
+                <NewUserForm />
             </main>
         </>
     );
