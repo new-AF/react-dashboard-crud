@@ -4,15 +4,14 @@ import viteLogo from "/vite.svg";
 
 import { Table } from "./Table";
 import "./App.css";
+import { Header } from "./Header";
 
 function App() {
     const [count, setCount] = useState(0);
 
     return (
         <>
-            <header>
-                <h6>My CRUD App</h6>
-            </header>
+            <Header />
             <main>
                 <Table demo={true} />
             </main>

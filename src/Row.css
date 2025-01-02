@@ -5,4 +5,8 @@
     }
     transition: color var(--transition-time),
         background-color var(--transition-time);
+
+    &:nth-of-type(even) {
+        backdrop-filter: brightness(1.25);
+    }
 }

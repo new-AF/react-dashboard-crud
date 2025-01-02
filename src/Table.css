@@ -6,17 +6,22 @@ table {
     --border-width: medium;
     --border-color: rgba(245, 245, 245, 0.233);
     --border-radius: var(--gap-small);
+
+    min-width: 1024px;
     border-spacing: 0;
     overflow: hidden;
     box-shadow: 0 0.2rem 1rem rgba(128, 128, 128, 0.466);
 
-    &:hover tbody tr {
-        color: rgba(255, 250, 250, 0.4) !important;
-        background-color: color-mix(in srgb, #242424, black 30%) !important;
-    }
-
     thead th {
         padding-block: var(--gap-medium);
+    }
+
+    /* elegant hover  */
+    tbody {
+        &:hover tr {
+            color: rgba(255, 250, 250, 0.4) !important;
+            background-color: color-mix(in srgb, #242424, black 30%) !important;
+        }
     }
 
     tr {
@@ -30,13 +35,6 @@ table {
         }
     }
 
-    th,
-    td {
-        text-align: start;
-        padding-inline: var(--gap-medium);
-        padding-block: var(--gap-small);
-    }
-
     thead {
         th {
             background-color: rgba(255, 250, 250, 0.203);
@@ -47,10 +45,11 @@ table {
         overflow: hidden;
     }
 
+    th,
     td {
-        border: var(--border-width) solid var(--border-color);
-        border-block-width: 0 var(--border-width);
-        border-inline-width: 0 0;
+        text-align: start;
+        padding-inline: var(--gap-medium);
+        padding-block: var(--gap-small);
     }
 
     /* each left and right cells */

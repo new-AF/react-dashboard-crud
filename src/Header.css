@@ -1,0 +1,16 @@
+.header {
+    align-self: start;
+    background-color: var(--header-bg);
+
+    padding-block: var(--gap-medium);
+
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.title {
+    text-align: start;
+
+    font-size: 2rem;
+    line-height: 1.1;
+}
