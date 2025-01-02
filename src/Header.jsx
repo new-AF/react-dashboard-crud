@@ -6,7 +6,7 @@ export const Header = () => {
             <h1 className="title">Dashboard</h1>
             <nav className="nav">
                 <ul className="list">
-                    <li>Create New User</li>
+                    <li>Add New User</li>
                 </ul>
             </nav>
         </header>

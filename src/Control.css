@@ -1,14 +1,14 @@
 .control {
     button {
         svg {
-            --width: 1em;
+            --width: 0.8em;
             width: var(--width);
             height: var(--width);
         }
 
         &:has(svg) {
             display: grid;
-            row-gap: var(--gap-tiny);
+            row-gap: 0.1em;
             justify-items: center;
             align-items: center;
         }

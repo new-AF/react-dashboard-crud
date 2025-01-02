@@ -2,7 +2,7 @@
     align-self: start;
     background-color: var(--header-bg);
 
-    padding-block: var(--gap-medium);
+    min-height: 4rem;
 
     display: grid;
     grid-auto-flow: column;
