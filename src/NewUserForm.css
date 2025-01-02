@@ -6,7 +6,7 @@ input {
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
+    background-color: var(--input-bg);
     transition: border-color 0.25s;
 
     &:hover {
@@ -23,6 +23,7 @@ input:not(input[type="submit"]) {
 }
 
 input[type="submit"] {
+    background-color: var(--button-bg2);
     font-size: 1.25rem;
     cursor: pointer;
 }
