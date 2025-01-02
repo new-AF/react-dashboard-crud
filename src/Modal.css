@@ -11,6 +11,8 @@
     height: 100vh;
     display: grid;
     grid-template-rows: min-content auto;
+
+    transition: opacity 500ms;
 }
 
 .window {
@@ -50,5 +52,10 @@
 }
 
 .hide-modal {
-    display: none !important;
+    z-index: -99;
+    opacity: 0;
+
+    > * {
+        opacity: 0;
+    }
 }
