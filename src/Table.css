@@ -12,6 +12,10 @@ table {
     overflow: hidden;
     box-shadow: 0 0.2rem 1rem rgba(128, 128, 128, 0.466);
 
+    th.Actions {
+        padding-inline-start: calc(var(--gap-small) + 2 * var(--gap-mega));
+    }
+
     thead th {
         padding-block: var(--gap-medium);
     }

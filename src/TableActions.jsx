@@ -1,17 +1,13 @@
 import { EditButton } from "./EditButton";
 import { DeleteButton } from "./DeleteButton";
 
-import "./Control.css";
+import "./TableActions.css";
 
-export const Control = ({ className = "control" }) => {
+export const TableActions = ({ className = "actions" }) => {
     return (
         <td className={className}>
             <EditButton />
             <DeleteButton />
         </td>
     );
-};
-
-export const appendControl = (array) => {
-    array.push(<Control />);
 };
