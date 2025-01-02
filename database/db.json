@@ -1,18 +1,22 @@
 {
     "users": [
         {
+            "id": 1,
             "name": "Ahmed Faruk",
             "email": "ahmed.faruk@example.com"
         },
         {
+            "id": 2,
             "name": "Abdullah Fatota",
             "email": "abdullah.fatota@example.com"
         },
         {
+            "id": 3,
             "name": "John Johns",
             "email": "john.johns@example.com"
         },
         {
+            "id": 4,
             "name": "Buffy Summers",
             "email": "buffy.summers@example.com"
         }

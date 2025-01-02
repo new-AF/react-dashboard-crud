@@ -3,11 +3,11 @@ import { DeleteButton } from "./DeleteButton";
 
 import "./TableActions.css";
 
-export const TableActions = ({ className = "actions" }) => {
+export const TableActions = ({ className = "actions", id, deleteUser }) => {
     return (
         <td className={className}>
             <EditButton />
-            <DeleteButton />
+            <DeleteButton onClick={(e) => deleteUser(id)} />
         </td>
     );
 };

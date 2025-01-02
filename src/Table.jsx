@@ -3,26 +3,28 @@ import { Row } from "./Row";
 
 import "./Table.css";
 
-export const Table = ({ arrayOfObjects }) => {
+export const Table = ({
+    arrayOfObjects,
+    actionFunctions: { addUser, deleteUser },
+}) => {
     const array = arrayOfObjects;
 
     const headerNames = Object.keys(array[0] || {}).concat(["Actions"]);
-    headerNames.unshift("ID");
 
-    const headerCells = headerNames.map((value) => (
+    const headers = headerNames.map((value) => (
         <th className={value}>{value}</th>
     ));
 
-    const dataCells = array.map((obj, index) => (
-        <Row id={index + 1} obj={obj} />
+    const rows = array.map((obj, index) => (
+        <Row id={index} obj={obj} deleteUser={deleteUser} />
     ));
 
     return (
         <table>
             <thead>
-                <tr>{headerCells}</tr>
+                <tr>{headers}</tr>
             </thead>
-            <tbody>{dataCells}</tbody>
+            <tbody>{rows}</tbody>
         </table>
     );
 };
