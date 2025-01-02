@@ -6,13 +6,14 @@ table {
     --border-width: medium;
     --border-color: rgba(245, 245, 245, 0.233);
     --border-radius: var(--gap-small);
+    --shadow: color-mix(in srgb, var(--bg), black 50%);
 
     border-radius: var(--border-radius);
 
     min-width: 1024px;
     border-spacing: 0;
     overflow: hidden;
-    box-shadow: 0 0.2rem 1rem color-mix(in srgb, var(--bg), black 50%);
+    box-shadow: 0 0.2rem 1rem var(--shadow);
 
     th.Actions {
         padding-inline-start: calc(var(--gap-small) + 2 * var(--gap-mega));
@@ -23,11 +24,9 @@ table {
     }
 
     /* elegant hover  */
-    tbody {
-        &:hover tr {
-            color: rgba(255, 250, 250, 0.4) !important;
-            background-color: color-mix(in srgb, #242424, black 30%) !important;
-        }
+    &:hover tbody tr {
+        color: rgba(255, 250, 250, 0.4) !important;
+        background-color: color-mix(in srgb, #242424, black 30%) !important;
     }
 
     tr {
@@ -42,8 +41,9 @@ table {
     }
 
     thead {
+        background-color: var(--table-header-bg);
+
         th {
-            background-color: rgba(255, 250, 250, 0.203);
             color: snow;
             text-transform: capitalize;
         }

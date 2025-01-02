@@ -13,6 +13,7 @@
     --input-bg: color-mix(in srgb, var(--bg), white 5%);
     --header-bg: color-mix(in srgb, var(--bg), white 10%);
     --modal-bg: color-mix(in srgb, var(--bg), white 25%);
+    --table-header-bg: color-mix(in srgb, var(--bg), white 25%);
     --de-emph-color: rgba(255, 250, 250, 0.8);
 
     --max-width: 1280px;
@@ -53,6 +54,7 @@ body {
     width: 100%;
 
     display: grid;
+    grid-template-rows: 1fr 3fr;
 
     margin: 0 auto;
     text-align: center;

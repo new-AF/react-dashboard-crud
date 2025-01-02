@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export const Modal = ({ children }) => {
     return (
-        <div className="modal">
+        <div className="modal hide-modal">
             <div className="window">
                 <WindowControls />
                 <div className="window-main">{children}</div>

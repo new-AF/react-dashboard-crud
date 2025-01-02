@@ -8,15 +8,35 @@ import { Modal } from "./Modal";
 import { NewUserForm } from "./NewUserForm";
 
 import "./App.css";
+import { useEffect } from "react";
 
 function App() {
-    const [count, setCount] = useState(0);
+    const [state, setState] = useState({ isLoading: true, rows: [] });
+
+    useEffect(() => {
+        const readDB = async () => {
+            try {
+                const response = await fetch("./database/db.json");
+                if (response.ok === false) throw new Error(response);
+                const json = await response.json();
+                console.log(json);
+                setState({ rows: json.users, isLoading: false });
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        setTimeout(readDB, 1000);
+    }, []);
 
     return (
         <>
             <Header />
             <main>
-                <Table demo={true} />
+                {state.isLoading && <p className="loading">Loading...</p>}
+                {state.isLoading === false && (
+                    <Table arrayOfObjects={state.rows} />
+                )}
                 <Modal children={<NewUserForm />} />
             </main>
         </>

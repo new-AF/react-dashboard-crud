@@ -3,23 +3,19 @@ import { Row } from "./Row";
 
 import "./Table.css";
 
-const exampleObject = () => {
-    const value = Math.random() + "";
-    return {
-        Name: `User ${value[2]}`,
-        Email: `User-${value[2]}@example.com`,
-    };
-};
+export const Table = ({ arrayOfObjects }) => {
+    const array = arrayOfObjects;
 
-export const Table = ({ example }) => {
-    const array = Array(5).fill(1).map(exampleObject);
+    const headerNames = Object.keys(array[0] || {}).concat(["Actions"]);
+    headerNames.unshift("ID");
 
-    const headerValues = Object.keys(array[0]).concat(["Actions"]);
-    const headerCells = headerValues.map((value) => (
+    const headerCells = headerNames.map((value) => (
         <th className={value}>{value}</th>
     ));
 
-    const dataCells = array.map((obj) => <Row obj={obj} />);
+    const dataCells = array.map((obj, index) => (
+        <Row id={index + 1} obj={obj} />
+    ));
 
     return (
         <table>

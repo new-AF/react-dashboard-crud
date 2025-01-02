@@ -1,0 +1,20 @@
+{
+    "users": [
+        {
+            "name": "Ahmed Faruk",
+            "email": "ahmed.faruk@example.com"
+        },
+        {
+            "name": "Abdullah Fatota",
+            "email": "abdullah.fatota@example.com"
+        },
+        {
+            "name": "John Johns",
+            "email": "john.johns@example.com"
+        },
+        {
+            "name": "Buffy Summers",
+            "email": "buffy.summers@example.com"
+        }
+    ]
+}
