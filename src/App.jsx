@@ -27,7 +27,7 @@ function App() {
             }
         };
 
-        setTimeout(readDB, 1000);
+        setTimeout(readDB, 500);
     }, []);
 
     const getIds = () => {
